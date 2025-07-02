@@ -10,7 +10,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        player: resolve(__dirname, 'player.html'),
         background: resolve(__dirname, 'src/background.ts')
       },
       output: {
@@ -21,5 +20,6 @@ export default defineConfig({
     },
     emptyOutDir: false,
     outDir: 'dist'
-  }
+  },
+  publicDir: 'public'
 });

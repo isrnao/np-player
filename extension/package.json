@@ -10,9 +10,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && pnpm run copy-files && pnpm run clean-dist-src",
-    "copy-files": "cp manifest.json dist/manifest.json && cp popup.html dist/popup.html && cp popup.js dist/popup.js && cp icon_16.png dist/icon_16.png && cp icon_48.png dist/icon_48.png && cp icon_128.png dist/icon_128.png",
-    "clean-dist-src": "rm -rf dist/src dist/*.ts dist/*.tsx",
+    "build": "tsc -b && vite build",
+    "clean": "rm -rf dist",
     "zip": "cd dist && zip -r ../../extension-for-chrome.zip .",
     "lint": "eslint .",
     "preview": "vite preview",
