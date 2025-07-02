@@ -11,8 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         player: resolve(__dirname, 'player.html'),
-        background: resolve(__dirname, 'src/background.ts'),
-        content: resolve(__dirname, 'src/content.ts')
+        background: resolve(__dirname, 'src/background.ts')
       },
       output: {
         entryFileNames: '[name].js',

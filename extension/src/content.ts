@@ -1,3 +1,7 @@
+// Content script is no longer needed as we're using popup instead
+// The functionality has been moved to popup.js
+
+/*
 function findM3u8Url(): string | null {
   const scripts = document.querySelectorAll('script[type="application/ld+json"]');
   for (const script of scripts) {
@@ -29,3 +33,4 @@ const url = findM3u8Url();
 if (url) {
   insertPlayButton(url);
 }
+*/
