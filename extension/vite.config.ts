@@ -7,9 +7,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  base: './',
   build: {
     rollupOptions: {
       input: {
+        player: resolve(__dirname, 'player.html'),
         background: resolve(__dirname, 'src/background.ts')
       },
       output: {
