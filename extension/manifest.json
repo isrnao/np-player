@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "m3u8 Player Launcher",
+  "version": "1.0.0",
+  "description": "Detect m3u8 contentUrl and play in new tab using HLS.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["player.html", "player.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
