@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && pnpm run copy-static",
+    "copy-static": "cp public/manifest.json dist/ && cp public/popup.html dist/ && cp public/popup.js dist/ && cp public/icon_*.png dist/",
     "clean": "rm -rf dist",
     "zip": "cd dist && zip -r ../../extension-for-chrome.zip .",
     "lint": "eslint .",
